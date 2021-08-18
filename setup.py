@@ -6,12 +6,15 @@ def readme_file():
     return data
 
 setup(
-    name='KumarPot',
+    name='KumaPot',
     version='1.0.0',
     description='Simple TCP logger HoneyPot',
     long_description=readme_file(),
     author='octacode',
     author_email='kshashwat@usf.edu',
     license='MIT',
-    packages=[]
+    packages=['kumapot'],
+    # scripts=['bin/kumapot', 'bin/nanopot.bat']
+    zipsafe = False,
+    install_requires=['docopt']
 )
