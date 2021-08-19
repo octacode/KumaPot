@@ -17,8 +17,8 @@ import logging
 from kumapot import HoneyPot
 
 # TODO: To replace with Docopt
-# config_filepath = '/etc/kumapot.ini'
-config_filepath = 'kumapot.ini'
+# config_filepath = '/etc/kumapot.example.ini'
+config_filepath = 'kumapot.example.ini'
 
 config = configparser.ConfigParser()
 config.read(config_filepath)

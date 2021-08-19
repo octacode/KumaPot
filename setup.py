@@ -16,5 +16,5 @@ setup(
     packages=['kumapot'],
     # scripts=['bin/kumapot', 'bin/nanopot.bat']
     zipsafe = False,
-    install_requires=['docopt']
+    install_requires=[]
 )
