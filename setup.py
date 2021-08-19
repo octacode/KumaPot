@@ -1,9 +1,7 @@
 from setuptools import setup
 
 def readme_file():
-    with open('Readme.rst') as readme_file:
-        data = readme_file
-    return data
+    return "SIMPLE TCP LOGGER"
 
 setup(
     name='kumaPot',

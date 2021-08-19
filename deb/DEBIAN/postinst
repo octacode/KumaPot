@@ -1,0 +1,5 @@
+#!/bin/bash
+useradd kumapot
+mkdir /home/kumapot
+python3 -m pip install ../opt/kumaPot-1.0.0.tar.gz
+systemctl enable kumapot

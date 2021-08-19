@@ -1,0 +1,7 @@
+Package: kumapot
+Version: 1.0.0
+Maintainer: octacode <kshashwat@usf.edu>
+Description: A simple TCP honeypot in Python 3
+Homepage: https://github.com/octacode/KumaPot
+Architecture: all
+Depends: python3

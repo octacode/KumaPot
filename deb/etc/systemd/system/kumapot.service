@@ -1,0 +1,13 @@
+[Unit]
+Description=KumaPot honeypot
+After=network.target
+
+[Service]
+Type=simple
+User=kumapot
+WorkingDirectory=/home/kumapot
+ExecStart=python -m kumapot /etc/kumapot.ini
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
