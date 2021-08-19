@@ -3,11 +3,12 @@ import threading
 from socket import socket, timeout
 
 
-class HoneyPot(object   ):
-    def __init__(self, ports, log_filepath):
+class HoneyPot(object):
+    def __init__(self, ports, log_filepath, host):
         self.ports = ports
         self.log_filepath = log_filepath
         self.listener_thread = {}
+        self.host = host
         logging.basicConfig(level=logging.INFO,
                             format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                             datefmt='%Y-%m-%d %H:%M:%s',
@@ -36,9 +37,9 @@ class HoneyPot(object   ):
             pass
         client_socket.close()
 
-    def start_new_listener_thread(self, port, BIND_IP='0.0.0.0'):
+    def start_new_listener_thread(self, port):
         listener = socket()
-        listener.bind((BIND_IP, int(port)))
+        listener.bind((self.host, int(port)))
         listener.listen(5)
         while True:
             client, addr = listener.accept()

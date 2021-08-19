@@ -6,7 +6,7 @@ def readme_file():
     return data
 
 setup(
-    name='KumaPot',
+    name='kumaPot',
     version='1.0.0',
     description='Simple TCP logger HoneyPot',
     long_description=readme_file(),
